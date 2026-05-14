@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GuessTheSong</string>
+    <string name="select"> select item</string>
+</resources>

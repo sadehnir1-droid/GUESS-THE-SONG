@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_view"
+    tools:context=".OptionsActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/artistOption"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="381dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:hint="Select an artist"
+        app:boxBackgroundColor="#9C27B0"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="#070707"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="0sp"
+        app:layout_constraintEnd_toEndOf="@+id/genreOption"
+        app:layout_constraintStart_toStartOf="@+id/genreOption"
+        app:layout_constraintTop_toBottomOf="@+id/genreOption"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+
+            android:id="@+id/artistTV"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:fontFamily="@font/agbalumo"
+            android:inputType="none"
+            app:simpleItems="@array/artists_list"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/genreOption"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="370dp"
+        android:layout_height="66dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:hint="Select a genre"
+        app:boxBackgroundColor="#9C27B0"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="#070707"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="0sp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/genreTV"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:fontFamily="@font/agbalumo"
+            android:inputType="none"
+            app:simpleItems="@array/genre_list"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinnerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="#070707"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="0sp"
+            tools:ignore="MissingConstraints">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/yearOption"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="378dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="28dp"
+        android:hint="Select a year"
+        app:boxBackgroundColor="#9C27B0"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="#070707"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="0sp"
+        app:layout_constraintEnd_toEndOf="@+id/artistOption"
+        app:layout_constraintStart_toStartOf="@+id/artistOption"
+        app:layout_constraintTop_toBottomOf="@+id/artistOption"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+
+            android:id="@+id/yearTV"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:fontFamily="@font/agbalumo"
+            android:inputType="none"
+            android:padding="8dp"
+            app:simpleItems="@array/years_list"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/typeOption"
+        android:layout_width="211dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="84dp"
+        android:background="#0D060E"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/radioButtonLyrics"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Lyrics"
+            android:textColor="#F8F2F2" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAudio"
+            android:layout_width="111dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Audio"
+            android:textColor="#FAF5F5" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="goToPlay"
+        android:text="PLAY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearOption"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:onClick="goToSettings"
+        app:srcCompat="@drawable/settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ED0D0D"
+        android:backgroundTint="#E00707"
+        android:onClick="goToActivity"
+        app:srcCompat="@drawable/backarrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="371dp"
+        android:layout_height="39dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/rounded_spinner"
+        android:backgroundTint="#9C27B0"
+        android:entries="@array/spinner_list"
+        android:fontFamily="@font/agbalumo"
+        android:hint="Select a category"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeWidth="0sp"
+        app:boxStrokeWidthFocused="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeOption"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

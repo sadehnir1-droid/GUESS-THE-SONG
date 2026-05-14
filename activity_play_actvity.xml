@@ -1,0 +1,140 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/background_view" tools:context=".PlayActivity">
+	<Button
+		android:id="@+id/guessSong"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="#1DCF24"
+		android:fontFamily="sans-serif-condensed-light"
+		android:onClick="guessSong" android:text="Guess"
+		android:textColorLink="#0AEB43"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.579"
+		app:layout_constraintStart_toEndOf="@+id/giveUp"
+		app:layout_constraintTop_toBottomOf="@+id/eSongName"
+		app:layout_constraintVertical_bias="0.425"/>
+	<Button
+		android:id="@+id/giveUp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="76dp"
+		android:backgroundTint="#E40808"
+		android:fontFamily="sans-serif-condensed-light"
+		android:onClick="giveUp"
+		android:text="Give Up"
+		app:layout_constraintBottom_toBottomOf="@+id/guessSong"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/guessSong"
+		app:layout_constraintVertical_bias="0.0"/>
+
+
+	<EditText
+		android:id="@+id/eSongName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="236dp"
+		android:background="@drawable/edit_text_border"
+		android:ems="10"
+		android:fontFamily="sans-serif-condensed-light"
+		android:hint="Enter the song"
+		android:inputType="text"
+		android:padding="10dp"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FAF8F8"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.462"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+
+	<ImageButton
+		android:id="@+id/imageButton3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="#00ED0D0D"
+		android:backgroundTint="#E00707"
+		android:onClick="goToGame"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/backarrow"/>
+
+	<ImageButton
+		android:id="@+id/imageButton2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:layout_marginEnd="16dp"
+		android:background="#0000"
+		android:onClick="goToSettings"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/settings"/>
+
+	<TextView
+		android:id="@+id/songLyrics"
+		android:layout_width="369dp"
+		android:layout_height="118dp"
+		android:background="@drawable/border"
+		android:fontFamily="sans-serif-condensed-light"
+		android:padding="16dp"
+		android:scrollbars="vertical"
+		android:text=""
+		android:textColor="#FBFBFB"
+		android:textSize="16sp"
+		android:visibility="invisible"
+		app:layout_constraintBottom_toTopOf="@+id/eSongName"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/stop"/>
+
+	<ImageButton
+		android:id="@+id/play"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="152dp"
+		android:backgroundTint="#9C27B0"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@android:drawable/ic_media_play"/>
+
+	<ImageButton
+		android:id="@+id/pause"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="#9C27B0"
+		app:layout_constraintEnd_toEndOf="@+id/play"
+		app:layout_constraintStart_toStartOf="@+id/play"
+		app:layout_constraintTop_toBottomOf="@+id/play"
+		app:srcCompat="@android:drawable/ic_media_pause"/>
+
+	<ImageButton
+		android:id="@+id/stop"
+		android:layout_width="55dp"
+		android:layout_height="50dp"
+		android:backgroundTint="#9C27B0"
+		app:layout_constraintEnd_toEndOf="@+id/pause"
+		app:layout_constraintStart_toStartOf="@+id/pause"
+		app:layout_constraintTop_toBottomOf="@+id/pause"
+		app:srcCompat="@android:drawable/checkbox_off_background"/>
+
+	<TextView
+		android:id="@+id/valueTitle"
+		android:layout_width="230dp"
+		android:layout_height="33dp"
+		android:layout_marginTop="72dp"
+		android:background="#0B010C"
+		android:fontFamily="sans-serif-condensed-light"
+		android:text="TextView"
+		android:textAlignment="center"
+		android:textColor="#FFFFFF"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@+id/songLyrics"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.513"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.086"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
